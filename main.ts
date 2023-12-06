@@ -9,7 +9,7 @@
 let distanceToObject: number = 0
 
 // setup
-radio.setGroup(154)
+radio.setGroup(76)
 basic.showIcon(IconNames.Asleep)
 
 // if button a is pressed, sends string 'too close' if distance is less than 10
@@ -23,7 +23,6 @@ input.onButtonPressed(Button.A, function () {
   // if the distance is less than 10 cm, project string "too close" to second MicroBit
   if (distanceToObject <= 10) {
     radio.sendString('Too Close')
-    basic.showString('Too Close')
     basic.showIcon(IconNames.Meh)
   }
 })
